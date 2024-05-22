@@ -28,4 +28,8 @@ ConfigMap: to store variables
 
 secret: to store confidantial variables 
 
+HAP (Horizontal Pod Autoscaling) 
+
+
+
 
