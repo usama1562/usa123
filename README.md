@@ -30,6 +30,8 @@ secret: to store confidantial variables
 
 HAP (Horizontal Pod Autoscaling) 
 
+minimum , maximum , desired capacity, condition,matrix (cpu utilization) 
+
 
 
 
