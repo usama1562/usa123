@@ -111,3 +111,11 @@ kubectl top pod <pod_name> #for pods
 kubectl top node #for nodes 
 
 kubectl get hpa -o wide 
+
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
+
+yum -y install epel-release
+
+yum -y update
+
+yum install stress
