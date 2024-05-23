@@ -1,5 +1,5 @@
-
 aws eks update-kubeconfig --region us-east-1 --name my-cluster 
+
 
 kubectl cluster-info 
 
