@@ -28,9 +28,21 @@ ConfigMap: to store variables
 
 secret: to store confidantial variables 
 
-HAP (Horizontal Pod Autoscaling) 
+HAP: (Horizontal Pod Autoscaling) 
 
 minimum , maximum , desired capacity, condition,matrix (cpu utilization) 
+
+ingress: it is kubernetes object which holds ingress rules 
+
+helm version 
+
+tar -xzvf helm 
+
+sudo mv linux-amd64/helm /usr/local/bin/helm 
+
+helm install my-release oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.2.1 
+
+kubectl edit ingress 
 
 
 

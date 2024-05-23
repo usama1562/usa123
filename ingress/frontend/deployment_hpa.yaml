@@ -18,7 +18,7 @@ spec:
         spec: 
           containers:
              - name: frontendapp
-               image: anupdudhe/frontendrds
+               image: nginx
                ports:
                   - containerPort: 80
                     protocol: TCP

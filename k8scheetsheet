@@ -118,4 +118,9 @@ yum -y install epel-release
 
 yum -y update
 
-yum install stress
+yum install stress 
+
+---------------------------------------------------------------------
+
+kubectl get ingress <ingress_name> 
+
