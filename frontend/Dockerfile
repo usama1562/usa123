@@ -1,27 +1,14 @@
-FROM tomcat:latest
-
-# Set the working directory
+FROM tomcat:9.0-slim
 WORKDIR /opt
-
-# Set environment variables
+# Set environment variables (consider injecting from outside)
 ENV APP_HOME=/usr/local/tomcat
 ENV PORT=8080
-
-# Install necessary tools for downloading files
-RUN apt-get update && apt-get install -y curl
-
-# Download and place the WAR and JAR files
-RUN curl -o $APP_HOME/webapps/student.war https://piyubucket.s3.amazonaws.com/student.war
-RUN curl -o $APP_HOME/lib/mysql-connector.jar https://piyubucket.s3.amazonaws.com/mysql-connector.jar
-
-# Copy the configuration files
+# Copy application WAR
+ADD https://piyubucket.s3.amazonaws.com/student.war $APP_HOME/webapps/
+# Copy database connector
+ADD https://piyubucket.s3.amazonaws.com/mysql-connector.jar $APP_HOME/lib
+# Copy configuration
 COPY config /opt
-
-# Modify the Tomcat configuration
-RUN sed -i '20r /opt/config' $APP_HOME/conf/context.xml
-
-# Expose the port
-EXPOSE 8080
-
-# Set the entry point to run Tomcat
+RUN sed -i '20r /opt/config' /usr/local/tomcat/conf/context.xml
+EXPOSE $PORT
 CMD ["catalina.sh", "run"]
