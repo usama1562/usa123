@@ -1,4 +1,4 @@
-FROM tomcat:9.0-slim
+FROM tomcat:9.0ss
 
 # Set the working directory
 WORKDIR /opt
