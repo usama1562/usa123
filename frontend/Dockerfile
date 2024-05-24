@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat:9.0-slim
 WORKDIR /opt
 ENV APP_HOME=/usr/local/tomcat
 ENV PORT=8080
