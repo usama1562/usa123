@@ -170,4 +170,18 @@ kubectl cluster-info
 
 kind create cluster --name kind-2 #to create multi node cluster 
 
-kind create cluster --name my-cluster --config config.yaml
+kind create cluster --name my-cluster --config config.yaml 
+
+kind get clusters
+
+kubectl run my-pod --image=nginx --port 80 
+
+kubectl expose pod my-pod --type NodePort --port 80 --target-port 80  
+
+kubectl get svc #to see exposed port 
+
+docker inspect <container_ip> 
+
+cuel <container_ip:port> 
+
+kubectl port-forward pod/my-pod 80:8080
