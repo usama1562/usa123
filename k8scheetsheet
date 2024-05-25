@@ -99,6 +99,7 @@ kubectl get secret
 kubectl describe secret my-sec 
 -----------------------------------------------------------
 mysql -h <endpoint of db> -u admin -pAdmin123 
+-------------------------------------------------------------------------
 
 docker push piyu5233/project:studentapp 
 
