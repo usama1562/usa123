@@ -182,6 +182,6 @@ kubectl get svc #to see exposed port
 
 docker inspect <container_ip> 
 
-cuel <container_ip:port> 
+curl <container_ip:port> 
 
 kubectl port-forward pod/my-pod 80:8080
