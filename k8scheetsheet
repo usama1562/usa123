@@ -185,3 +185,5 @@ docker inspect <container_ip>
 curl <container_ip:port> 
 
 kubectl port-forward pod/my-pod 80:8080
+----------------------------------------------------------------------
+kubectl describe pods mypod #to see mounted volume 
